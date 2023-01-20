@@ -74,8 +74,6 @@ function App() {
 
       setFavorites(tempMovieInFavs); // Aca en mi estado de favoritos quiero setear el array 'tempMovieInFavs'
 
-      console.log('Se agregó la pelicula');
-      
     } else{
      let moviesLeft = tempMovieInFavs.filter(oneMovie => {
       return oneMovie.id !== movieData.id
@@ -83,7 +81,6 @@ function App() {
 
      localStorage.setItem("favs", JSON.stringify(moviesLeft)); //Aca seteamos en el storage 
      setFavorites(moviesLeft); // y adicionalmente seteamos en el estado asi se actualiza cada vez que eliminamos 
-     console.log('Se eliminó la pelicula'); // Despues de sacar la pelicula asi muestra el listado con las que quedan 
     }
   };
 
